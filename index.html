@@ -141,7 +141,9 @@ p.ex1 {
     </p>
 
 
-  <script type="text/javascript">
+<!-- Inside the <head> of your website -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
   google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
@@ -165,6 +167,10 @@ p.ex1 {
     chart.draw(data, options);
   }
 </script>
+
+<!-- Inside the <body> of your website -->
+<div id="chart_div" style="width: 800px; height: 500px;"></div>
+
 
 
     
