@@ -62,7 +62,7 @@ p.ex1 {
     </p>
 
    <h3 id="Introduction">Introduction</h3>
-    <p id="Introduction_InText">
+    <pre id="Introduction_InText">
     <p class="ex1">
        <pre>
         High Frequency Trading Algorithms are complex algorithms that can process large number of trades within 
@@ -83,7 +83,7 @@ p.ex1 {
       </p>
 
     <h3 id="Analysis and discussion">Analysis and discussion</h3> 
-      <p id="Analysis_InText">
+      <pre id="Analysis_InText">
     <p class="ex1">
       <pre>
         Advantages of HFT Algorithms 
@@ -268,7 +268,7 @@ Columbia Business School (2013). High-Frequency Trading: Is it Good or Bad for M
     const AnalysisCount = displayWordCount("Analysis_InText");
     const Abstractcount = displayWordCount("Abstract_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + AbstractCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
