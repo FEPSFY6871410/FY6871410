@@ -140,36 +140,25 @@ p.ex1 {
       </pre>
     </p>
 
-
-<!-- Inside the <head> of your website -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-  google.charts.load('current', { packages: ['corechart'] });
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('number', 'Year');
+function drawChart() {
+var data= new google.visualization.DataTable();
+    data.addColumn('number','Year');
     data.addColumn('number', 'Equity Trades Percentages');
-
-    data.addRows([
-      [2005, 0.08],
-      [2023, 0.35],
-    ]);
-
+}
+data.addRows([
+  [2005,8%]
+  [2023,35%]
+  ]);
     var options = {
-      title: 'Percentage of Equity Trades',
-      hAxis: { title: 'Year' },
-      vAxis: { title: 'Equity Trades Percentages', format: 'percent' },
-    };
-
-    var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-  }
+title: 'Percentage of Equity Trades ',
+hAxis: { title: 'Year' },
+vAxis: { title: 'Equity Trades Percentages' }
+};
+var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}
 </script>
-
-<!-- Inside the <body> of your website -->
-<div id="chart_div" style="width: 800px; height: 500px;"></div>
 
 
 
