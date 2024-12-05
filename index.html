@@ -143,6 +143,22 @@ p.ex1 {
 <script type="text/javascript">
   function drawChart(){
     var data= newgooglee.visualization.DataTable();
+    data.addColumn('number','Year');
+    data.addColumn('number', 'Equity Trades Percentages');
+
+data.addRows([
+  [2005,8%]
+  [2023,35%]
+  ]);
+    var options = {
+title: 'Percentage of Equity Trades ',
+hAxis: { title: 'Year' },
+vAxis: { title: 'Equity Trades Percentages' }
+};
+var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}
+</script>
     
      
 <!table of contents>
