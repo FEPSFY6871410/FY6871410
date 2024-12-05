@@ -227,4 +227,32 @@ Utradealgos.com. (2024). What is High Frequency Algo Trading? - uTrade Algos. [o
 </script>
     
     
+<p id="totalWordCount"></p>
+<hr>
+<script>
+
+  function displayWordCount(sectionId, outputId) {
+   
+    const text = document.getElementById(sectionId).textContent;
+    
+    const wordArray = text.trim().split(/\s+/);
+   
+    const wordCount = wordArray.length;
+   
+    return wordCount;
+  }
+ 
+  function displayTotalWordCount() {
+  
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisanddiscussionCount = displayWordCount("Analysisanddiscussion_InText");
+    const AbstractCount = displayWordCount("Abstract_InText");
+
+    const totalWordCount = IntroductionCount + AnalysisanddiscussionCount + AbstractCount;
+    
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  
+  window.onload = displayTotalWordCount;
+</script>
 
